@@ -5,6 +5,7 @@ phone_pattern = r"^(\+\d{12}|0(9|7)\d{8})$"
 name_pattern = r"^[A-Za-z]{5,50}$"
 email_pattern=r"^[\w\.-]+@[\w\.-]+\.\w+$"
 
+
 def add_contact():
     unVerified = True
     while(unVerified):        
