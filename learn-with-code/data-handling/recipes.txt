@@ -4,4 +4,4 @@ instructions: Boil spaghetti in salted water until al dente.,Heat olive oil in a
 
 Chicken Stir Fry
 ingredients: 2 chicken breasts and sliced,1 bell pepper and sliced,1 cup broccoli florets,2 tbsp soy sauce,1 tbsp oyster sauce,1 tsp cornstarch,1 clove garlic,2 tbsp vegetable oil
-instructions:Mix chicken with cornstarch and 1 tbsp soy sauce. Set aside.,Heat oil in a pan. Cook garlic and chicken until golden.,Add broccoli and bell pepper. Stir-fry for 3–4 minutes.,Add remaining soy sauce and oyster sauce. Mix well.,Cook for another 2 minutes. Serve hot over rice or noodles.
+instructions:Mix chicken with cornstarch and 1 tbsp soy sauce. Set aside.,Heat oil in a pan. Cook garlic and chicken until golden.,Add broccoli and bell pepper. Stir-fry for 3 or 4 minutes.,Add remaining soy sauce and oyster sauce. Mix well.,Cook for another 2 minutes. Serve hot over rice or noodles.

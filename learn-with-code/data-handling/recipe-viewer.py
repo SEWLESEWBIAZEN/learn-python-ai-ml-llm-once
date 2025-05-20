@@ -3,7 +3,7 @@ def load_file():
         with open("recipes.txt",'r') as file:
             content=file.read()
             recipes=content.split("\n\n")            
-            recipe_dict={}
+            recipe_dict={}            
             for recipe in recipes:
                 lines=recipe.split("\n")
                 if len(lines)>=3:
@@ -19,16 +19,23 @@ def load_file():
 def main():
     print("\n----------------START--------------------")
     reciepes=load_file()
+    i=0
+    j=0
     for name in reciepes:
-        print(f"\n----Recipe {name} Details------")  
+        i+=1
+        print(f"\n{i}. ----Recipe {name} Details------")  
         print(f"Ingredients")
         current_recipe_ingredients=reciepes[name]['ingredients'].strip().split(',')
         current_recipe_instructions=reciepes[name]['instructions'].strip().split(',')
+        j=0
         for ingredient  in current_recipe_ingredients:
-            print(f"- {ingredient.strip()}")            
-        print(f"Instructions")    
+            j+=1
+            print(f"{j}. {ingredient.strip()}")            
+        print(f"\nInstructions") 
+        j=0   
         for instruction in current_recipe_instructions:
-            print(f"- {instruction.strip()}")
+            j+=1
+            print(f"{j}. {instruction.strip()}")
     print ("\n-----------------END--------------------\n")
 
 main()
