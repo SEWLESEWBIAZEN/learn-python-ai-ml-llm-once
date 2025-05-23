@@ -2,9 +2,42 @@
 # defining the file
 JOURNAL = '../../README.md'
 
-# Step 1. add entry, writing to the file
-def add_entry():
-    entry = input("Enter your entry:")
+# defining entry type selection
+def show_entry_type():
+    print("\n------Select from 1-4-----------")
+    print("1. Title.")
+    print("2. Subtitle.")
+    print("3. Description.")
+    print("4. exit")
+    
+
+# format entry based on their type.
+def format_entry():
+    while True:
+        show_entry_type()
+        try:
+            entry_type = int(input("\nEnter your type: "))
+            if(entry_type == 1):
+                entry_text = input("Type here: ")
+                formatted_text = f"\n\n {entry_text}\n"
+                add_entry(formatted_text)
+            elif(entry_type== 2):
+                entry_text = input("Type here: ")
+                formatted_text = f"\n {entry_text}\n"
+                add_entry(formatted_text)
+            elif(entry_type == 3):
+                entry_text = input("Type here: ")
+                formatted_text = f"\n {entry_text}\n"
+                add_entry(formatted_text)
+            elif(entry_type == 4):
+                print("You all done! Thank you.")
+                break
+        except:
+            print("Error occured while accepting user choice: ")          
+       
+
+# Step 1. add entry, writing to the file            
+def add_entry(entry):
     try:
         with open(JOURNAL,'a') as file:
             file.write(entry)
@@ -55,7 +88,7 @@ def main():
         try:
             choice = int(input("\nEnter your choice: "))
             if(choice == 1):
-                add_entry()
+                format_entry()
             elif(choice== 2):
                 view_entries()
             elif(choice == 3):
