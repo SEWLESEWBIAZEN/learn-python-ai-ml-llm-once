@@ -76,7 +76,7 @@ def search_entry():
     else:
         print("No Search content found!")
 
-# step 4. mehu
+# step 4. menu
 def show_menu():
     print("\n------Select from 1-4-----------")
     print("1. To Register your daily Journal")
