@@ -2,6 +2,8 @@
 
 Month 1
 Week 1.
+Day 1.
+
 Python Basics.
 Learning Python journey started. I started by refreshing my python understanding by walking through python basics like lists, tupels, dictionaries, loops, and more others.
 
