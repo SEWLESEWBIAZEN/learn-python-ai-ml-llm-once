@@ -8,8 +8,7 @@ def show_entry_type():
     print("1. Title.")
     print("2. Subtitle.")
     print("3. Description.")
-    print("4. exit")
-    
+    print("4. exit")    
 
 # format entry based on their type.
 def format_entry():
@@ -27,7 +26,7 @@ def format_entry():
                 add_entry(formatted_text)
             elif(entry_type == 3):
                 entry_text = input("Type here: ")
-                formatted_text = f"\n {entry_text}\n"
+                formatted_text = f"{entry_text}\n"
                 add_entry(formatted_text)
             elif(entry_type == 4):
                 print("You all done! Thank you.")
@@ -56,21 +55,26 @@ def view_entries():
         print("Error occured while reading the journal.")
 
 # Step 3. Search an item from the content
-def search_entry():
-    
-    search_term = input("Enter search term")
+def search_entry():    
+    found_content = ""
+    search_term = input("Enter search term:").lower()
     try:
         with open(JOURNAL,'r') as file:
             contents = file.readlines()
+           
             for content in contents:
-                if content.__contains__(search_term):                  
-                    print("\n------Found Content----------")
+                if search_term in content.lower():
                     print(content)
-                else:                    
-                    print("No Search content found!")
+                    found_content+=f"\n{content}"                              
+                else:
+                    pass                  
     except:
         print("Error occured while searching a content!")
-
+    if(found_content!=""):
+        print("\n------Found Content----------")
+        print(found_content)   
+    else:
+        print("No Search content found!")
 
 # step 4. mehu
 def show_menu():
@@ -100,5 +104,5 @@ def main():
             print("Error occured while accepting user choice: ")
             main()
 
-
+# calling main method
 main()
