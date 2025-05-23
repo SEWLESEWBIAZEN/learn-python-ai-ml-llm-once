@@ -1,6 +1,6 @@
 
 # defining the file
-JOURNAL = 'Readme.md'
+JOURNAL = '../../README.md'
 
 # Step 1. add entry, writing to the file
 def add_entry():
