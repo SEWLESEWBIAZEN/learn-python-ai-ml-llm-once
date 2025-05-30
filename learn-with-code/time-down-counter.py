@@ -25,10 +25,13 @@ def get_counting_down(time_left):
 # main function, entry of th app
 def main(): 
     event_date = get_event_date()
+    if not event_date:
+        print("Invalid format please enter again.")
+        main()
     while True:
         time_left = get_time_left(event_date) 
         if time_left.total_seconds() <=0:
-             return            
+            return            
         get_counting_down(time_left)
         time.sleep(1)       
 
